@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#geo-selector {
+    position: relative;
+    overflow: auto;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1170px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.geo-inner {
+    width: 40%;
+}
+
+.geo-inner input, .geo-inner div {
+    margin: 5px;
+    width: calc(100% - 10px);
+}
+
+/* .geo-inner:after {
+    content: '';
+    display: block;
+    clear: both;
+} */
+
+#regions {
+    margin: 5px;
+}
+
+#cities{
+    float: right;
+    margin: 5px;
+    width: calc(60% - 10px);
+}
+
