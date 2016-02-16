@@ -1,4 +1,4 @@
-# Website Static Markup
+# Static Website Pixel Perfect Markup
 Technologies:
 HTML5, CSS3.
  
