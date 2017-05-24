@@ -1,0 +1,37 @@
+<!--- TEMPLATENAME: geolocation.isml --->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Geolocation identifier</title>
+	<link rel="stylesheet" href="${URLUtils.staticURL('../css/reset.css')}" />
+	<link rel="stylesheet" href="${URLUtils.staticURL('../css/style.css')}" />
+</head>
+<body>
+	<isinclude template="util/modules"/>
+	<isset name="Resource" value="${require('dw/web/Resource')}" scope="page">
+	
+	<h1 class="breadcrumb">Get Geolocation through Google Map API</h1>
+	
+	<div class="container">
+		<form action="${URLUtils.continueURL()}" method="post" id="${pdict.CurrentForms.geolocation.htmlName}">
+			<fieldset>
+				<isinputfield formfield="${pdict.CurrentForms.geolocation.address}" type="input">
+			</fieldset>
+			<fieldset>
+				<input type="submit" value="${Resource.msg('global.submit','locale',null)}" name="${pdict.CurrentForms.geolocation.getgeolocation.htmlName}" class="btn"/>
+			</fieldset>
+		</form>
+		
+	</div>
+
+	<isif condition="${!empty(pdict.coordinates)}">
+		<div class="container coordinates">
+			<div>Latitude of provided address is: <span class="coorinate">${pdict.coordinates.lat}</span></div>
+			<div>Longitude of provided address is: <span class="coorinate">${pdict.coordinates.lng}</span></div>
+		</div>
+	</isif>
+	
+</body>
+</html>
+

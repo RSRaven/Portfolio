@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <custom-type type-id="geolocation">
+        <display-name xml:lang="x-default">geolocation</display-name>
+        <description xml:lang="x-default">This object keeps a latitude and a longitude of an address.&#13;
+Lat and Lng received from Google Map API.</description>
+        <staging-mode>no-staging</staging-mode>
+        <storage-scope>site</storage-scope>
+        <key-definition attribute-id="address">
+            <type>string</type>
+            <min-length>0</min-length>
+        </key-definition>
+        <attribute-definitions>
+            <attribute-definition attribute-id="latitude">
+                <display-name xml:lang="x-default">latitude</display-name>
+                <type>double</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <scale>13</scale>
+            </attribute-definition>
+            <attribute-definition attribute-id="longitude">
+                <display-name xml:lang="x-default">longitude</display-name>
+                <type>double</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <scale>13</scale>
+            </attribute-definition>
+        </attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="geolocation">
+                <display-name xml:lang="x-default">geolocation</display-name>
+                <attribute attribute-id="address"/>
+                <attribute attribute-id="latitude"/>
+                <attribute attribute-id="longitude"/>
+            </attribute-group>
+        </group-definitions>
+    </custom-type>
+
+</metadata>

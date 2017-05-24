@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns="http://www.demandware.com/xml/impex/services/2014-09-26">
+    <service-credential service-credential-id="geolocation.cred">
+        <url>https://maps.googleapis.com/maps/api/geocode/json</url>
+        <user-id/>
+        <password encrypted="true" encryption-type="common.export">o6gAY454cCA3iGYTYuvfJBEZgZXLOszRueEZO3ktEGw=</password>
+    </service-credential>
+
+    <service-profile service-profile-id="geolocation.prof">
+        <timeout-millis>5000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>true</cb-enabled>
+        <cb-calls>10</cb-calls>
+        <cb-millis>5000</cb-millis>
+    </service-profile>
+
+    <service service-id="geolocation">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>geolocation</log-prefix>
+        <comm-log-enabled>false</comm-log-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>geolocation.prof</profile-id>
+        <credential-id>geolocation.cred</credential-id>
+    </service>
+
+</services>

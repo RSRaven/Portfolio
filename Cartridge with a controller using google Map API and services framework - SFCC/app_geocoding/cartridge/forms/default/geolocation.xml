@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<form>
+
+	<field formid="address" label="geolocation.address" type="string" binding="address" missing-error="geolocation.addressinvalid" value-error="geolocation.addressinvalid" />
+	
+	<action formid="getgeolocation" valid-form="true"/>
+
+</form>
